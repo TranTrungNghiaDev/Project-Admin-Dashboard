@@ -1,67 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <title>Project Admin Dashboard</title>
 </head>
+
 <body>
     <header id="header">
-        <section>
-            <ul>
-                <li><input type="search"></li>
-                <li><img alt="user-avatar"></li>
-                <li>User Name</li>
-            </ul>
+        <section id="tools-bar">
+            <section id="search">
+                <input type="search">
+            </section>
+
+            <section id="notification">
+                <button><img src="./icons/notification.svg" alt="notification"></button>
+            </section>
+
+            <section id="user-info">
+                <button>
+                    <img src="./icons/avatar.avif" alt="user-avatar">
+                </button>
+                <span>User Name</span>
+            </section>
         </section>
-        <section>
-            <nav id="navbar">
-                <ul>
-                    <li>
-                        <section>
-                            <img>
-                            <p>Hi there, User</p>
-                        </section>
-                    </li>
-                    <li>
-                        <button>New</button>
-                    </li>
-                    <li>
-                        <button>Upload</button>
-                    </li>
-                    <li>
-                        <button>Share</button>
-                    </li>
-                </ul>
-            </nav>
+
+        <section id="menu-bar">
+            <section id="welcome-user">
+                <img alt="user-avatar">
+                <p>Hello User</p>
+            </section>
+
+            <section id="buttons-list">
+                <nav>
+                    <ul>
+                        <li>
+                            <button>New</button>
+                        </li>
+                        <li>
+                            <button>Upload</button>
+                        </li>
+                        <li>
+                            <button>Share</button>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
         </section>
+
     </header>
-   
+
     <main id="main">
-        <section>
+        <section id="projects">
             <h2>Your projects</h2>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
         </section>
-        <section>
+
+        <section id="announcements">
             <h2>Announcements</h2>
+            <article></article>
+            <article></article>
+            <article></article>
         </section>
-        <section>
+
+        <section id="trending">
             <h2>Trending</h2>
+            <aticle></aticle>
+            <aticle></aticle>
+            <aticle></aticle>
+            <aticle></aticle>
         </section>
     </main>
     <aside id="dashboard">
         <h2>Dashboard</h2>
-        <ul>
-            <li>Home</li>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>History</li>
-            <li>Tasks</li>
-            <li>Communities</li>
-            <li>Settings</li>
-            <li>Support</li>
-            <li>Privacy</li>
-        </ul>
+
+        <section>
+            <ul>
+                <li><a id="home-link" href="#">Home</a></li>
+                <li><a id="profile-link" href="#">Profile</a></li>
+                <li><a id="messages-link" href="#">Messages</a></li>
+                <li><a id="history-link" href="#">History</a></li>
+                <li><a id="tasks-link" href="#">Tasks</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <ul>
+                <li><a id="communities-link" href="#">Communities</a></li>
+                <li><a id="settings-link" href="#">Settings</a></li>
+                <li><a id="support-link" href="#">Support</a></li>
+                <li><a id="privacy-link" href="#">Privacy</a></li>
+            </ul>
+        </section>
+
     </aside>
 </body>
+
 </html>

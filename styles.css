@@ -1,32 +1,188 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+*::before {
+    background-size: 25px 25px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    content: "";
+    position: absolute;
+    left: 0px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* Basic Layout */
 body {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: repeat(2, 1fr) 3fr 1fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(2, 1fr) 3fr;
     grid-template-areas: "dashboard header"
-    "dashboard header"
     "dashboard main"
-    "dashboard footer"
+    "dashboard main";
+    height: 100vh;
+}
+
+ul {
+    list-style-type: none;
 }
 
 #header {
     grid-area: header;
     border-bottom: 1px solid;
     box-shadow: 0 4px 2px -2px gray;
+    padding: 20px;
 }
 
 #main {
     grid-area: main;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "projects announcements"
+    "projects trending";
 }
 
 #dashboard {
     grid-area: dashboard;
-    background-color: blue;
+    background-color: #93c5fd;
+    color: black;
+    padding: 15px 20px;
 }
 
-#footer {
-    grid-area: footer;
+/* Specific section */
+/* Header's child */
+#tools-bar {
+    display: grid;
+    grid-template-columns: 4fr 1fr 3fr;
 }
+
+#menu-bar {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+#buttons-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#search {
+    position: relative;
+}
+
+#search::before {
+    background-image: url(./icons/search.svg);
+}
+
+#search input {
+    margin-left: 40px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 0 5px;
+    background-color: #ecfeff;
+}
+
+#notification button {
+    width: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+#user-info button {
+    background-color: transparent;
+    width: fit-content;
+    border: none;
+}
+
+#user-info img {
+    width: 50px;
+}
+
+/* Main's child */ 
+#projects {
+    display: grid;
+    grid-area: projects;
+}
+
+#announcements {
+    display: grid;
+    grid-area: announcements;
+}
+
+#trending {
+    display: grid;
+    grid-area: trending;
+}
+
+/* Dashboard's child */
+#dashboard section {
+    margin-top: 40px;
+}
+
+#dashboard li {
+    margin: 20px 0;
+}
+
+#dashboard a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#dashboard h2, #dashboard li {
+    padding-left: 40px;
+    position: relative;
+}
+
+#dashboard h2::before {
+    background-image: url(./icons/view-dashboard.svg);
+    top: 2px;
+}
+
+#dashboard a::before {
+    bottom: 2px;
+}
+
+#home-link::before {
+    background-image: url(./icons/home.svg);
+}
+
+#profile-link::before {
+    background-image: url(./icons/profile.svg);
+}
+
+#messages-link::before {
+    background-image: url(./icons/message.svg);
+}
+
+#history-link::before {
+    background-image: url(./icons/history.svg);
+}
+
+#tasks-link::before {
+    background-image: url(./icons/task.svg);
+}
+
+#communities-link::before {
+    background-image: url(./icons/communities.svg);
+}
+
+#settings-link::before {
+    background-image: url(./icons/setting.svg);
+}
+
+#support-link::before {
+    background-image: url(./icons/support.svg);
+}
+
+#privacy-link::before {
+    background-image: url(./icons/privacy.svg);
+}
+
